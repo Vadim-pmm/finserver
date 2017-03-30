@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users
+
+  # один контроллер мы переписали (поверх devise), добавляя два поля first_name и last_name
+  # укажем путь к нему
+  devise_for :users, :controllers => { :registrations => 'user/registrations' }
   resources :user_stocks, except: [:show, :edit, :update]
 
   root 'welcome#index'

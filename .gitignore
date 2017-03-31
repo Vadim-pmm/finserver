@@ -18,3 +18,4 @@
 
 .idea/*
 Будет удалено app/views/user_stocks/
+/config/secrets.yml
